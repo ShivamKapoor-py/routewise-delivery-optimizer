@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        RouteWise | AI-Powered Delivery Route Optimization
+    </title>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <h1>RouteWise</h1>
+
+            <button id="optimizeBtn">
+                Optimize Route
+            </button>
+
+            <!-- DISTANCE -->
+
+            <div class="metric-card">
+
+                <div class="metric-title">
+                    Total Distance
+                </div>
+
+                <div class="metric-value"
+                     id="distance">
+                    -
+                </div>
+
+            </div>
+
+            <!-- DURATION -->
+
+            <div class="metric-card">
+
+                <div class="metric-title">
+                    Total Duration
+                </div>
+
+                <div class="metric-value"
+                     id="duration">
+                    -
+                </div>
+
+            </div>
+
+            <!-- SAVINGS -->
+
+            <div class="metric-card">
+
+                <div class="metric-title">
+                    Route Savings
+                </div>
+
+                <div class="metric-value"
+                     id="savings">
+                    -
+                </div>
+
+            </div>
+
+            <!-- STOPS -->
+
+            <div class="metric-card">
+
+                <div class="metric-title">
+                    Delivery Stops
+                </div>
+
+                <div class="metric-value">
+                    10
+                </div>
+
+            </div>
+
+            <!-- ENGINE -->
+
+            <div class="metric-card">
+
+                <div class="metric-title">
+                    Optimization Engine
+                </div>
+
+                <div class="metric-value">
+                    OR-Tools
+                </div>
+
+            </div>
+
+            <!-- PROJECT INFO -->
+
+            <div class="metric-card">
+
+                <div class="metric-title">
+                    Routing Engine
+                </div>
+
+                <div class="metric-value">
+                    OSRM
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+
+            <div
+                style="
+                margin-top:20px;
+                text-align:center;
+                color:#64748b;
+                font-size:12px;
+                line-height:1.6;
+            ">
+
+                FastAPI • OR-Tools • OSRM • Leaflet
+
+                <br>
+
+                Real-Time Route Optimization
+
+            </div>
+
+        </div>
+
+        <!-- MAP -->
+
+        <div id="map"></div>
+
+    </div>
+
+    <!-- LEAFLET -->
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- POLYLINE DECODER -->
+
+    <script src="https://unpkg.com/@mapbox/polyline"></script>
+
+    <!-- APP -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
